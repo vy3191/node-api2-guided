@@ -7,9 +7,12 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   const opts = {
-    limit:req.query.limit
+    limit:req.query.limit,
+    // sortby:req.query.sortby
+    sortdir:req.query.sortdir
   }
-  hubs.find()
+  console.log(req.query);
+  hubs.find(opts)
     .then(hubs => {
       res.status(200).json(hubs)
     })

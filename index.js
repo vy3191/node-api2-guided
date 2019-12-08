@@ -1,5 +1,4 @@
-const express = require("express")
-const hubs = require("./hubs/hubs-model.js");
+const express = require("express");
 const hubRouter = require("./routers/hub");
 const welcomRouter = require("./routers/welcome");
 
